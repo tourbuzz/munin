@@ -59,6 +59,7 @@ when 'arch', 'smartos'
 end
 
 service service_name do
+  provider Chef::Provider::Service::Upstart
   supports :restart => true
   action [:start, :enable]
 end
