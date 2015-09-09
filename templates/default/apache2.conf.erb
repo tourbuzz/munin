@@ -4,7 +4,7 @@
 <VirtualHost *:<%= node['munin']['web_server_port'] %>>
   ServerAdmin   <%= node['munin']['sysadmin_email'] %>
   ServerName    <%= node['fqdn'] %>
-  ServerAlias   munin <%= node['munin']['public_domain'] %>
+  ServerAlias   munin munin.tourbuzz.net <%= node['munin']['public_domain'] %>
   Alias         /munin <%= node['munin']['docroot'] %>
   DocumentRoot  <%= node['munin']['docroot'] %>
   CustomLog     <%= node['apache']['log_dir'] %>/munin_access.log combined
